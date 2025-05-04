@@ -93,12 +93,12 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {[
             {
-              name: "Aulia Rahma",
+              name: "Muhammad Surya Informatika F",
               quote:
                 "LMS sangat membantu dalam mengatur jadwal belajar dan mengakses materi kapan saja. Tidak perlu lagi bertanya-tanya soal deadline tugas!",
             },
             {
-              name: "Dimas Setiawan",
+              name: "Satriya Dwi Mahardhika Informatika F",
               quote:
                 "Dengan LMS, saya bisa berdiskusi langsung dengan dosen tanpa harus menunggu pertemuan offline. Efisien banget!",
             },
