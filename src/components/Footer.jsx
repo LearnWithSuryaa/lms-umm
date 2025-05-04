@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 mt-20 pt-10 pb-6 border-t border-gray-200">
+    <footer className="bg-white/20 text-gray-600 mt-20 pt-10 pb-6 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         
         {/* Kolom 1: Logo & Kampus */}
