@@ -1,13 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("202410370110053");
+  const [password, setPassword] = useState("2024");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Tambahkan logika autentikasi di sini
-    console.log({ email, password });
+
+    // Validasi login sederhana
+    if (email === "202410370110053" && password === "2024") {
+      navigate("/dashboard");
+    } else {
+      alert("Email atau password salah!");
+    }
   };
 
   return (
@@ -20,9 +27,7 @@ export default function LoginForm() {
             alt="Logo UMM"
             className="h-16 mx-auto mb-2"
           />
-          <h1 className="text-2xl font-bold text-black mt-1">
-            Masuk
-          </h1>
+          <h1 className="text-2xl font-bold text-black mt-1">Masuk</h1>
           <p className="text-sm text-gray-500 mt-1">
             Akses materi, tugas, dan diskusi perkuliahan
           </p>
@@ -33,8 +38,8 @@ export default function LoginForm() {
           <div>
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
-              type="email"
-              placeholder="Emai Dosen / NIM Mahasiswa"
+              type="text"
+              placeholder="Email Dosen / NIM Mahasiswa"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
