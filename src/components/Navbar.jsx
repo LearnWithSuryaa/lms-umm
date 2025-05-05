@@ -1,6 +1,9 @@
-import { HelpCircle } from "lucide-react";
+import { useState } from "react";
+import { HelpCircle, Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header
       className="sticky top-0 z-50 bg-white shadow-[0_2px_6px_rgba(0,0,0,0.05)]"
@@ -25,6 +28,15 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Tombol menu mobile */}
+        <button
+          className="md:hidden text-gray-600"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Buka menu navigasi"
+        >
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
         {/* Navigasi Desktop */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600 font-medium">
           <NavLink href="#beranda" label="Beranda" />
@@ -33,6 +45,15 @@ export default function Navbar() {
           <NavLink href="/bantuan" label="Bantuan" icon={<HelpCircle className="w-4 h-4" />} />
         </nav>
       </div>
+
+      {/* Navigasi Mobile */}
+      {menuOpen && (
+        <nav className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm text-gray-700 font-medium">
+          <NavLink href="#beranda" label="Beranda" />
+          <NavLink href="/fitur" label="Fitur" />
+          <NavLink href="/bantuan" label="Bantuan" icon={<HelpCircle className="w-4 h-4" />} />
+        </nav>
+      )}
     </header>
   );
 }

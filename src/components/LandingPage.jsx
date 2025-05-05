@@ -16,31 +16,31 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section id="beranda" className="bg-gradient-to-br from-red-100 to-white">
-        <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 gap-12 min-h-screen">
-          {/* Konten Teks */}
+        <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-6 gap-12 min-h-[80vh] sm:min-h-screen py-10">
+          {/* Teks */}
           <div
             className="text-center lg:text-left lg:w-1/2 px-2"
             data-aos="fade-up"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-snug">
               Belajar Lebih Mudah <br />
               <span className="text-red-600">
                 Dengan LMS Universitas Muhammadiyah Malang
               </span>
             </h1>
-            <p className="text-base md:text-lg text-gray-600 mb-8">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8">
               Platform pembelajaran modern untuk mendukung aktivitas kuliah
               digital yang interaktif dan efisien.
             </p>
             <a
               href="/login"
-              className="inline-block px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold text-lg rounded-xl shadow-lg transition-transform transform hover:scale-105"
+              className="inline-block px-6 sm:px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold text-base sm:text-lg rounded-xl shadow-lg transition-transform transform hover:scale-105"
             >
               Masuk Sekarang
             </a>
           </div>
 
-          {/* Ilustrasi SVG */}
+          {/* Ilustrasi */}
           <div
             className="w-full lg:w-1/2 flex justify-center"
             data-aos="fade-left"
@@ -48,7 +48,7 @@ export default function HomePage() {
             <img
               src="/images/At the office-amico.svg"
               alt="Ilustrasi kantor"
-              className="w-full max-w-md lg:max-w-lg"
+              className="w-4/5 sm:w-3/4 md:w-2/3 lg:w-full max-w-md lg:max-w-lg"
               loading="lazy"
             />
           </div>

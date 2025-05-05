@@ -67,7 +67,7 @@ export default function LoginForm() {
 
             <button
               type="submit"
-              className="w-full bg-[#C8102E] hover:bg-[#a40e24] text-white py-2.5 rounded-xl font-semibold transition duration-300"
+              className="w-full bg-[#C8102E] hover:bg-[#a40e24] text-white py-2.5 rounded-xl font-semibold transition duration-300 cursor-pointer"
             >
               Masuk
             </button>
